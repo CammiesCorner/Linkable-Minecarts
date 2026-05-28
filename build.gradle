@@ -33,6 +33,10 @@ dependencies {
 	implementation include("org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/linkableminecarts.classtweaker")
+}
+
 processResources {
 	def version = project.version
 	inputs.property "version", version
