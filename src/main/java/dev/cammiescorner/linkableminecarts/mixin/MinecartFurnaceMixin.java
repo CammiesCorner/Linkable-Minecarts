@@ -1,5 +1,6 @@
 package dev.cammiescorner.linkableminecarts.mixin;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.minecart.AbstractMinecart;
@@ -20,5 +21,10 @@ public abstract class MinecartFurnaceMixin extends AbstractMinecart {
 			// TODO figure out smoke
 //			level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, this.getX(), this.getY() + 0.8, this.getZ(), 3, 0, 0, 0, 0.07);
 		}
+	}
+
+	@ModifyReturnValue(method = "getMaxSpeed", at = @At("RETURN"))
+	private double makeMaxSpeedSame(double original, ServerLevel level) {
+		return getBehavior().getMaxSpeed(level);
 	}
 }
