@@ -21,6 +21,7 @@ public class TrainsComponent implements ServerTickingComponent {
 
 	@Override
 	public void serverTick() {
+		// TODO make minecarts in a train move in tandem, and keep them an equal distance of 1 block apart
 		for(Train train : trains.values()) {
 			var velocity = Vec3.ZERO;
 			var minecarts = train.viewMinecarts().stream().map(minecartEntityReference -> minecartEntityReference.getEntity(level, AbstractMinecart.class)).toList();
