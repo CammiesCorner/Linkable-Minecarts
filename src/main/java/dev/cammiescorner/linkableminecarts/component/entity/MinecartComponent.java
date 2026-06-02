@@ -1,6 +1,6 @@
 package dev.cammiescorner.linkableminecarts.component.entity;
 
-import dev.cammiescorner.linkableminecarts.init.LinkableMinecartsComponents;
+import dev.cammiescorner.linkableminecarts.init.MinecartsComponents;
 import dev.cammiescorner.linkableminecarts.util.Train;
 import net.minecraft.core.UUIDUtil;
 import net.minecraft.world.entity.EntityReference;
@@ -36,7 +36,7 @@ public class MinecartComponent implements CardinalComponent {
 			trainId = UUID.randomUUID();
 			var train = new Train(trainId, List.of(EntityReference.of(entity)), List.of());
 
-			entity.level().getComponent(LinkableMinecartsComponents.TRAINS_COMPONENT).addTrain(train);
+			entity.level().getComponent(MinecartsComponents.TRAINS_COMPONENT).addTrain(train);
 
 			return train;
 		}
@@ -49,7 +49,7 @@ public class MinecartComponent implements CardinalComponent {
 		if(trainId == null)
 			return null;
 
-		return entity.level().getComponent(LinkableMinecartsComponents.TRAINS_COMPONENT).getTrain(trainId);
+		return entity.level().getComponent(MinecartsComponents.TRAINS_COMPONENT).getTrain(trainId);
 	}
 
 	public void setTrain(Train train) {

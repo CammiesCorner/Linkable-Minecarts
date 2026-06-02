@@ -12,7 +12,7 @@ import org.ladysnake.cca.api.v8.component.CardinalComponent;
 import org.ladysnake.cca.api.v8.level.LevelComponentFactoryRegistry;
 import org.ladysnake.cca.api.v8.level.LevelComponentInitializer;
 
-public class LinkableMinecartsComponents implements EntityComponentInitializer, LevelComponentInitializer {
+public class MinecartsComponents implements EntityComponentInitializer, LevelComponentInitializer {
 	public static final ComponentKey<MinecartComponent> MINECART_COMPONENT = createComponent("minecart", MinecartComponent.class);
 	public static final ComponentKey<TrainsComponent> TRAINS_COMPONENT = createComponent("trains", TrainsComponent.class);
 

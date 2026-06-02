@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"#c:chests/wooden",
+		"minecraft:minecart"
+	],
+	"result": {
+		"id": "minecraft:chest_minecart",
+		"components": {
+			"minecraft:max_stack_size": 16
+		}
+	}
+}

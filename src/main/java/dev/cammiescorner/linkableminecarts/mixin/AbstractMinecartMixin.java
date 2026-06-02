@@ -1,7 +1,7 @@
 package dev.cammiescorner.linkableminecarts.mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import dev.cammiescorner.linkableminecarts.init.LinkableMinecartsComponents;
+import dev.cammiescorner.linkableminecarts.init.MinecartsComponents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.VehicleEntity;
 import net.minecraft.world.entity.vehicle.minecart.AbstractMinecart;
@@ -15,7 +15,7 @@ public abstract class AbstractMinecartMixin extends VehicleEntity {
 
 	@WrapWithCondition(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/vehicle/minecart/AbstractMinecart;computeSpeed()V"))
 	private boolean averageSpeed(AbstractMinecart instance) {
-		var component = getComponent(LinkableMinecartsComponents.MINECART_COMPONENT);
+		var component = getComponent(MinecartsComponents.MINECART_COMPONENT);
 		var train = component.getTrain();
 
 		return train == null || train.viewMinecarts().size() == 1;

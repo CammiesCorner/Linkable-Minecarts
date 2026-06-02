@@ -28,6 +28,7 @@ dependencies {
 
 	implementation include("eu.pb4:polymer-core:${project.polymer_version}")
 	implementation include("eu.pb4:polymer-networking:${project.polymer_version}")
+	implementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
 	implementation include("org.ladysnake.cardinal-components-api:cardinal-components-base:${project.cca_version}")
 	implementation include("org.ladysnake.cardinal-components-api:cardinal-components-world:${project.cca_version}")
 	implementation include("org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.cca_version}")

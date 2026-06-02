@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": [
+		"# #",
+		"###"
+	],
+	"key": {
+		"#": "#c:ingots/iron"
+	},
+	"result": {
+		"id": "minecraft:minecart",
+		"components": {
+			"minecraft:max_stack_size": 16
+		}
+	}
+}

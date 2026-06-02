@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"minecraft:furnace",
+		"minecraft:minecart"
+	],
+	"result": {
+		"id": "minecraft:furnace_minecart",
+		"components": {
+			"minecraft:max_stack_size": 16
+		}
+	}
+}

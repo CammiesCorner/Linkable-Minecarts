@@ -19,7 +19,7 @@
 			"dev.cammiescorner.linkableminecarts.LinkableMinecarts"
 		],
 		"cardinal-components": [
-			"dev.cammiescorner.linkableminecarts.init.LinkableMinecartsComponents"
+			"dev.cammiescorner.linkableminecarts.init.MinecartsComponents"
 		]
 	},
 	"custom": {

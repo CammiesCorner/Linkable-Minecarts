@@ -2,7 +2,7 @@ package dev.cammiescorner.linkableminecarts.util;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import dev.cammiescorner.linkableminecarts.init.LinkableMinecartsComponents;
+import dev.cammiescorner.linkableminecarts.init.MinecartsComponents;
 import net.minecraft.core.UUIDUtil;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityReference;
@@ -66,13 +66,13 @@ public class Train {
 		for(EntityReference<AbstractMinecart> reference : trainB.minecarts) {
 			var minecart = reference.getEntity(minecartA.level(), AbstractMinecart.class);
 
-			minecart.getComponent(LinkableMinecartsComponents.MINECART_COMPONENT).setTrain(this);
+			minecart.getComponent(MinecartsComponents.MINECART_COMPONENT).setTrain(this);
 		}
 
 		minecarts.addAll(trainAStart ? 0 : minecarts.size(), trainBStart ? trainB.minecarts : trainB.minecarts.reversed());
 		connections.add(trainAStart ? 0 : connections.size(), stack);
 		connections.addAll(trainAStart ? 0 : connections.size(), trainBStart ? trainB.connections : trainB.connections.reversed());
-		minecartB.level().getComponent(LinkableMinecartsComponents.TRAINS_COMPONENT).removeTrain(trainB);
+		minecartB.level().getComponent(MinecartsComponents.TRAINS_COMPONENT).removeTrain(trainB);
 
 		return true;
 	}
